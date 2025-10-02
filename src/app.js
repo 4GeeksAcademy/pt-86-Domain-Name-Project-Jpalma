@@ -14,14 +14,15 @@ const combineArrays =()=> {
   let noun = ['jogger', 'racoon','teacher','lake','dog'];
   let extensions=['.com','.net','.us','.io','.org'];
 
-  for(let i =0; i <pronoun.length; i++){
-    for(let a =0; a <adjective.length; a++){
-      for(let b =0; b <noun.length; b++){
-        for(let c =0; c <extensions.length; c++){
-            console.log(pronoun[i] + adjective[a] + noun[b] + extensions[c])
-        }
-      }
-     }
-    }
+  pronoun.forEach(p => {
+    adjective.forEach(a => {
+      noun.forEach(n => {
+        extensions.forEach(e => {
+          console.log(p + a + n + e);
+        });
+      });
+    });
+  });
 };
+
 
